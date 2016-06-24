@@ -35,6 +35,7 @@ class Tour(models.Model):
     number_people = models.PositiveIntegerField()
     data_start = models.DateTimeField()
     data_end = models.DateTimeField()
+    is_close = models.BooleanField(default=False)
 
     def __str__(self):
         return "{0} ({1}-{2}) price:{3}".format(self.city, self.data_start.date(), self.data_end.date(), self.price)
